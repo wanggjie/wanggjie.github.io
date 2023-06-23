@@ -1,27 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/06/10/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>从 0.0 开始搭建自己的个人博客 Hexo</title>
+    <url>/2020/01/01/NO2hexo/</url>
+    <content><![CDATA[<h1 id="从-0-0-开始搭建自己的个人博客-Hexo"><a href="#从-0-0-开始搭建自己的个人博客-Hexo" class="headerlink" title="从 0.0 开始搭建自己的个人博客 Hexo"></a>从 0.0 开始搭建自己的个人博客 Hexo</h1><h2 id="1：安装node环境"><a href="#1：安装node环境" class="headerlink" title="1：安装node环境"></a>1：安装node环境</h2><p>下载地址node.js地址：<a href="https://nodejs.org/en">https://nodejs.org/en</a></p>
+<p>下载 → 双击安装 → 无脑继续&#x2F;下一步</p>
+<p>查看是否安装成功 → 打开终端（win+R）输入命令 cmd 出现终端窗口   →  输入node -v 查看版本号信息</p>
+<p>如果下面显示版本号就已经安装成功了</p>
+<p>（因为 hexo 需要 node.js 来生成的，所以前置工作要 node.js 支持，否则无法继续下去）</p>
+<p><img src="/2020/01/01/NO2hexo/1.png" alt="1"></p>
+<h2 id="2：安装全局-Hexo"><a href="#2：安装全局-Hexo" class="headerlink" title="2：安装全局 Hexo"></a>2：安装全局 Hexo</h2><p>Hexo 官网地址：<a href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a></p>
+<p>可以在终端窗口继续操作输入 <em><strong>npm install hexo-cli -g</strong></em>  命令安装全局 Hexo </p>
+<p>检验是否安装成功  →  输入命令 hexo -v 查看版本信息  →  安装成功</p>
+<p><img src="/2020/01/01/NO2hexo/%E6%96%87%E7%AB%A02.png" alt="2"></p>
+<h2 id="3：创建Hexo"><a href="#3：创建Hexo" class="headerlink" title="3：创建Hexo"></a>3：创建Hexo</h2><p>创建一个空文件夹  →  如果途中出现什么问题，可以直接删掉重来</p>
+<p>空文件夹开启终端窗口   →   输入命令（hexo init）初始化 Hexo     →   最后显示 Start blogging with Hexo! 文字表示初始化成功   →   可以看到文件夹下面已经生成了很多 hexo 基础的一些文件夹&#x2F;文件</p>
+<p>启动 hexo 博客   →   输入命令 hexo s   →   显示在本地打开地址：<a href="http://localhost:4000/">http://localhost:4000/</a></p>
+<p><img src="/2020/01/01/NO2hexo/%E6%96%87%E7%AB%A03.png" alt="3"></p>
+<p><img src="/2020/01/01/NO2hexo/%E6%96%87%E7%AB%A04.png" alt="4"></p>
+<p>可以试着创建一篇博客文章  →  跟着网站下面的一些命令操作  →   hexo new “My New Post（文章标题）” 创建新文章  →  创建完成可以再 source 文件下面的 _post 文件夹看到相对于的 md 文档  →  hexo generate 生成在hexo博客上   →  再启动hexo   →  生成完成</p>
+<p><img src="/2020/01/01/NO2hexo/%E6%96%87%E7%AB%A05.png" alt="5"></p>
+<p>目前到这里的话，hexo已经搭建完成了</p>
+<p>接下来我们把它部署到 GitHub 远端上面去，不仅仅止于在本地访问</p>
+<h2 id="4：部署到远端-GitHub"><a href="#4：部署到远端-GitHub" class="headerlink" title="4：部署到远端 GitHub"></a>4：部署到远端 GitHub</h2><p>打开 GitHub 官网   →  创建新的仓库（用户部署个人博客的 GitHub 仓库命名必须符合特定要求才行）【GitHub的昵称.github.io】   →  后续通过这个名称访问自己的博客</p>
+<p><img src="/2020/01/01/NO2hexo/%E6%96%87%E7%AB%A06.png" alt="6"></p>
+<p>创建新仓库完成后  →  需要在hexo文件夹下创建一个git部署的插件 <em><strong>npm install –save hexo-deployer-git</strong></em></p>
+<p><img src="/2020/01/01/NO2hexo/%E6%96%87%E7%AB%A07.png" alt="7"></p>
+<p>通过npm下载完成后   →   需要设置 _config.yml 文件   →   打开文件在最后面修改&#x2F;添加 </p>
+<p><img src="/2020/01/01/NO2hexo/%E6%96%87%E7%AB%A08.png" alt="8"></p>
+<p>修改保存后   →   部署到GitHub上面去   →   输入命令 hexo d   →   完成绑定 GitHub 账号密码     →   推送完成（刷新GitHub仓库便可查看到已上传的文件）</p>
+<p><img src="/2020/01/01/NO2hexo/%E6%96%87%E7%AB%A09.png" alt="9"></p>
+<p>然后在通过仓库名可以远程访问到自己的博客了（ <a href="https://github.com/wanggjie/wanggjie.github.io">wanggjie.github.io</a> ）</p>
+<p><img src="/2020/01/01/NO2hexo/%E6%96%87%E7%AB%A010.png" alt="10"></p>
+<p>目前到这hexo已经搭建完毕</p>
 ]]></content>
   </entry>
   <entry>
     <title>我的第一篇博客文章</title>
-    <url>/2023/06/11/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<p><img src="/./img/%E8%8F%9C%E7%89%9B.png" alt="王菜牛头像"></p>
+    <url>/2023/06/11/test/</url>
+    <content><![CDATA[<p><img src="/2023/06/11/test/cainiu.png"></p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world!!!!&#x27;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
