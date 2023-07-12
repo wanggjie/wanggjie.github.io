@@ -1,0 +1,11 @@
+#musicwgj{
+  z-index: 999999999 !important;
+}
+
+#musicwgj.aplayer-narrow .aplayer-body, #musicwgj.aplayer-narrow .aplayer-pic{
+  width: 123px;
+}
+
+#musicwgj.aplayer-fixed.aplayer-narrow .aplayer-body{
+  width: 123px !important;
+}
