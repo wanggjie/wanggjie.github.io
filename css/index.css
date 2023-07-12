@@ -3,17 +3,6 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%
 }
-#musicwgj{
-  z-index: 999999999 !important;
-}
-
-#musicwgj.aplayer-narrow .aplayer-body, #musicwgj.aplayer-narrow .aplayer-pic{
-  width: 123px;
-}
-
-#musicwgj.aplayer-fixed.aplayer-narrow .aplayer-body{
-  width: 123px !important;
-}
 
 body {
   margin: 0
